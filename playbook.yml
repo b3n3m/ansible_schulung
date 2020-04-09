@@ -1,0 +1,19 @@
+---
+- name: Playbook tux foo
+  hosts: all
+  tasks:
+    - name: Check User tux
+      user:
+        name: tux
+        state: present
+
+    - name: Verzeichnis /home/tux/foo anlegen
+      file: 
+        path: /home/tux/foo
+        state: directory
+        owner: tux
+
+    - name: Copy inventory
+      copy:
+        src: ~/ansible_schulung/inventory
+        dest: /home/tux/foo/

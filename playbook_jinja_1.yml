@@ -1,0 +1,16 @@
+---
+
+- name: A Plabook using Jinja and Variables
+  hosts: centos2
+  vars:
+    exercise_list:
+      - 'one'
+      - 'two'
+      - 'three'
+      - 'four'
+      - 'five'
+      - 'six'
+  tasks:
+    - name:
+      debug:
+        msg: "{{ exercise_list[3] }} {{ exercise_list[5] }}"

@@ -1,0 +1,10 @@
+---
+
+- name: Just a Playbook with Vars
+  hosts: centos
+  vars:
+    http_port: 80
+  tasks: 
+    - name: A Task where variable will be called
+      debug:
+        msg: "Der Port für http lautet: {{http_port}}"

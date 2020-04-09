@@ -1,0 +1,6 @@
+---
+
+- name: My first playbook with roles
+  hosts: ubuntu1
+  roles:
+    - install_apache2

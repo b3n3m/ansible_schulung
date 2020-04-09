@@ -1,0 +1,13 @@
+---
+# tasks file for apache2
+
+- name: Install apache2 in latest version
+  package:
+    name: apache2
+    state: latest
+  notify: restart_webserver
+
+- name: ensure that service is up and running
+  service:
+    name: apache2
+    state: restarted

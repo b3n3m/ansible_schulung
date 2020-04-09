@@ -1,0 +1,6 @@
+---
+
+- name: Lopp Aufgabe 2
+  hosts: all
+  tasks:
+    - name:

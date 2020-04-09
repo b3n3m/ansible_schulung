@@ -1,0 +1,14 @@
+---
+
+- name: Check Dienste
+  hosts: all
+
+  tasks:
+  - name: Check in Loop
+    service:
+      name: "{{item}}"
+      state: started
+    loop:
+      - 'sshd'
+      - "cron"
+      - "systemd-timedated"

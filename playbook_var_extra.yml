@@ -1,0 +1,21 @@
+---
+
+- name: a playbook where a variable will be declared and debugged
+
+  hosts: ubuntu1
+
+  vars:
+
+    name1: tux
+
+    os: linux
+
+    company: b1
+
+  tasks:
+
+    - name: a task with a debug module
+
+      debug:
+
+        msg: "My name is {{ name1 }}, I love {{ os }} and I work at {{ company }}."

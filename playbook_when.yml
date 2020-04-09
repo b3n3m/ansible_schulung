@@ -1,0 +1,16 @@
+---
+
+- name: Playbook When - check Software
+  hosts: all
+  tasks:
+  - name: Check Git
+    package:
+      name: git
+      state: present
+    when: ansible_hostname == "ubuntu1" or ansible_hostname == "suse1"
+
+  - name: Check curl wenn nicht Suse oder Debian
+    package:
+      name: curl
+      state: present
+    when: ansible_os_family != "Debian" or ansible_os_family != "Suse"

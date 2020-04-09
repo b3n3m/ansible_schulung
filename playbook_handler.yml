@@ -1,0 +1,6 @@
+---
+
+- name: Play with Handlers
+  hosts: ubuntu
+  roles:
+    - apache2

@@ -1,0 +1,18 @@
+---
+# tasks file for install_apache2
+
+- name: ensure that packages are there in their latest version
+  package:
+    name: "{{ item }}"
+    state: latest
+  loop:
+    - 'apache2'
+    - 'ssh'
+
+- name: ensure that the sevices are up and running
+  service:
+    name: "{{ item }}"
+    state: started
+  loop:
+    - 'apache2'
+    - 'ssh'

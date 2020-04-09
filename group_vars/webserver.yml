@@ -1,0 +1,6 @@
+apache2_package_state: latest
+apache_vhosts:
+  - name: mysite.de
+    docroot: "/var/www/mysite.de/"
+  - name: home.b1.de
+    docroot: "/var/www/home.b1.de/"

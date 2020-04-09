@@ -1,0 +1,4 @@
+---
+
+http_default_vars: 80
+http_webroot: /var/www/web

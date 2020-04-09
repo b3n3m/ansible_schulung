@@ -1,0 +1,14 @@
+---
+
+- name: Show me IP Adress
+  hosts: centos2
+
+  tasks:
+#    - name: Show me IP Adress from centos2
+#      setup:
+#        filter: ansible_default_ipv4.address
+
+    - name: a task with a debug modul to sort things out
+      debug:
+#        msg: "{{ ansible_eth0['ipv4']['address'] }}"
+        msg: "{{ ansible_default_ipv4.address }}"

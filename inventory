@@ -1,0 +1,27 @@
+# Alias deklarieren
+# b1 ansible_host=centos2 ansible_port=22
+
+[ubuntu]
+ubuntu1
+ubuntu2
+[suse]
+suse1
+suse2
+[centos]
+centos1
+centos2
+
+[webserver]
+ubuntu1
+suse1
+
+[deployment]
+centos1
+suse2
+
+[productive:children]
+webserver
+deployment
+# [productive:vars]
+# httpd_default_port: 80
+# httpd_webroot: /var/www/web
